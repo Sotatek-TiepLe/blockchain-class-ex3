@@ -143,8 +143,6 @@ function Stake(props) {
 	// Updating
 	useEffect(() => {
 		(async function () {
-			// Check network
-			// TODO:
 			//
 			if (
 				// Init app
@@ -183,7 +181,7 @@ function Stake(props) {
 		myContract
 			.approve(SC_MasterChef, balanceWETH.toString())
 			.then(async (res) => {
-				// TODO: await res.wait();
+				await res.wait();
 				showMessageSuccess("Approve success !");
 				setIsApprove(true);
 				setApproving(false);
